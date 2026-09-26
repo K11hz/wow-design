@@ -1,24 +1,24 @@
 # WOW Design
 
-An art director skill for Claude Code and AI coding agents. Guides the creation of distinctive, high-craft web experiences using Next.js, React, Tailwind CSS, and Motion without generic AI design patterns.
+Art director skill for Claude Code and AI coding agents. Helps build custom web interfaces in Next.js, React, Tailwind CSS, and Motion instead of default AI layouts.
 
 ## Contents
 
-- `SKILL.md` — Core instructions: project briefing, single signature feature, typography hierarchy, OKLCH color palettes, motion choreography, and screenshot verification loops.
-- `references/directions.md` — Curated visual directions (curated font pairings, color ratios, layout aesthetics, and signature mechanics).
-- `references/anti-slop.md` — Checklist of common AI design pitfalls to avoid.
+- `SKILL.md`: core instructions for project briefing, signature features, typography hierarchy, OKLCH palettes, motion, and screenshot verification loops.
+- `references/directions.md`: visual directions covering font pairings, color ratios, layouts, and signature mechanics.
+- `references/anti-slop.md`: checklist of common AI design mistakes to avoid.
 
 ## Installation
 
-### Global Skill (Claude Code)
+### Global skill (Claude Code)
 
-Clone directly into your global Claude skills directory:
+Clone into your global Claude skills directory:
 
 ```bash
 git clone https://github.com/K11hz/wow-design.git ~/.claude/skills/design-wow
 ```
 
-### Project-Specific Skill
+### Project-specific skill
 
 Clone into your repository's local skills directory:
 
@@ -28,21 +28,21 @@ git clone https://github.com/K11hz/wow-design.git .claude/skills/design-wow
 
 ## Usage
 
-The skill triggers automatically on prompts involving frontend design and visual polish, such as:
+The skill triggers on prompts involving frontend design and visual polish, such as:
 - *"Make this landing page look premium"*
 - *"Redesign the hero section"*
 - *"This UI looks boring and generic"*
 - *"Design a landing page like Linear or Apple"*
 - *"Fix our typography and color palette"*
 
-### Workflow Sequence
+### Workflow
 
-1. **Briefing** — Establish the design foundation and record it in `DESIGN.md`.
-2. **Tokens** — Set up OKLCH color variables and typography pairings in Tailwind `@theme`.
-3. **Structure** — Build section rhythm and mobile-first responsive layout.
-4. **Hero & Signature Element** — Implement one memorable interactive or visual focal point.
-5. **Motion** — Add subtle micro-interactions and smooth scroll reveals with Motion.
-6. **Self-Verification** — Capture responsive screenshots (375px, 768px, 1440px) via Playwright and iterate against a 10-point craft scale.
+1. Briefing: establish the design foundation and record it in `DESIGN.md`.
+2. Tokens: set up OKLCH color variables and typography pairings in Tailwind `@theme`.
+3. Structure: build section rhythm and mobile-first responsive layout.
+4. Hero and signature element: implement one focal interactive or visual feature.
+5. Motion: add micro-interactions and smooth scroll reveals with Motion.
+6. Self-verification: capture responsive screenshots (375px, 768px, 1440px) via Playwright and iterate against the 10-point craft scale.
 
 ## License
 
