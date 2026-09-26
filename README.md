@@ -1,41 +1,49 @@
 # WOW Design
 
-Скилл арт-директора для Claude Code и AI-агентов. Создает выразительные сайты на Next.js, React, Tailwind CSS и Motion без шаблонного AI-дизайна.
+An art director skill for Claude Code and AI coding agents. Guides the creation of distinctive, high-craft web experiences using Next.js, React, Tailwind CSS, and Motion without generic AI design patterns.
 
-## Что внутри
+## Contents
 
-- `SKILL.md` — системный промпт: бриф, выбор одной главной идеи, типографика, OKLCH-палитра, анимации и цикл проверки верстки.
-- `references/directions.md` — каталог визуальных направлений (палитры, пары шрифтов, ключевые эффекты).
-- `references/anti-slop.md` — чеклист запрещенных визуальных штампов.
+- `SKILL.md` — Core instructions: project briefing, single signature feature, typography hierarchy, OKLCH color palettes, motion choreography, and screenshot verification loops.
+- `references/directions.md` — Curated visual directions (curated font pairings, color ratios, layout aesthetics, and signature mechanics).
+- `references/anti-slop.md` — Checklist of common AI design pitfalls to avoid.
 
-## Установка
+## Installation
 
-### В глобальные скиллы Claude Code
+### Global Skill (Claude Code)
+
+Clone directly into your global Claude skills directory:
 
 ```bash
 git clone https://github.com/K11hz/wow-design.git ~/.claude/skills/design-wow
 ```
 
-### В конкретный проект
+### Project-Specific Skill
+
+Clone into your repository's local skills directory:
 
 ```bash
 git clone https://github.com/K11hz/wow-design.git .claude/skills/design-wow
 ```
 
-## Использование
+## Usage
 
-Скилл активируется автоматически по запросам:
-`дизайн`, `вау`, `премиум`, `лендинг`, `главная страница`, `редизайн`, `сделай красиво`, `выглядит скучно`.
+The skill triggers automatically on prompts involving frontend design and visual polish, such as:
+- *"Make this landing page look premium"*
+- *"Redesign the hero section"*
+- *"This UI looks boring and generic"*
+- *"Design a landing page like Linear or Apple"*
+- *"Fix our typography and color palette"*
 
-### Порядок работы над страницей
+### Workflow Sequence
 
-1. **Бриф** — фиксация направления в `DESIGN.md`.
-2. **Токены** — настройка OKLCH-палитры и шрифтов в `@theme`.
-3. **Сетка** — базовая структура секций и адаптив.
-4. **Hero** — реализация одной ключевой визуальной фишки.
-5. **Анимации** — микро-взаимодействия и плавные переходы через Motion.
-6. **Самопроверка** — прогон скриншотов на 375px, 768px и 1440px через Playwright с оценкой по 10-балльной шкале.
+1. **Briefing** — Establish the design foundation and record it in `DESIGN.md`.
+2. **Tokens** — Set up OKLCH color variables and typography pairings in Tailwind `@theme`.
+3. **Structure** — Build section rhythm and mobile-first responsive layout.
+4. **Hero & Signature Element** — Implement one memorable interactive or visual focal point.
+5. **Motion** — Add subtle micro-interactions and smooth scroll reveals with Motion.
+6. **Self-Verification** — Capture responsive screenshots (375px, 768px, 1440px) via Playwright and iterate against a 10-point craft scale.
 
-## Лицензия
+## License
 
 MIT

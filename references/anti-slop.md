@@ -1,24 +1,24 @@
-# Анти-шаблон: признаки "сайта от AI"
+# Anti-Slop: Signs of "Generic AI Design"
 
-Если найдено хотя бы 3 пункта — дизайн не готов.
+If 3 or more items are present, the design is not ready for production.
 
-- [ ] Фиолетово-синий градиент на всём подряд
-- [ ] Hero: заголовок по центру + подзаголовок + две кнопки + ничего больше
-- [ ] Три одинаковые карточки с иконкой в цветном кружочке
-- [ ] Всё скруглено `rounded-2xl` и у всего одинаковая тень
-- [ ] Эмодзи в заголовках и кнопках
-- [ ] Только системный шрифт или только Inter без характера
-- [ ] Все секции одной высоты и одной структуры, центрированный текст везде
-- [ ] Текст "Unlock the power of...", "Seamless", "Revolutionize", "Next-gen"
-- [ ] Серый текст на сером фоне с плохим контрастом
-- [ ] Анимация "всё выезжает отовсюду" без смысла
-- [ ] Нет hover/focus состояний
-- [ ] Заглушки вместо реальных картинок
-- [ ] На мобильном просто сжатая десктопная версия
-- [ ] Чистый #000 / #fff и больше одного акцентного цвета
+- [ ] Purple-to-blue gradient slapped onto every element
+- [ ] Hero layout is just: centered title + generic subtitle + two buttons + blank space
+- [ ] 3 identical feature cards with an icon inside a soft colored circle
+- [ ] Everything uses `rounded-2xl` with identical diffuse drop shadows
+- [ ] Emojis inside headings or primary buttons
+- [ ] Default system sans or unstyled Inter with zero personality
+- [ ] All sections share identical vertical spacing, identical layout, and center-aligned text
+- [ ] Marketing fluff copy: "Unlock the power of...", "Seamless integration", "Revolutionize", "Next-gen"
+- [ ] Light gray text on dark gray background with illegible contrast
+- [ ] Gratuitous animations sliding in from every direction without clear hierarchy
+- [ ] Missing hover, active, and focus states
+- [ ] Unrendered dummy blocks or placeholder boxes instead of tangible visuals
+- [ ] Mobile version is merely a cramped, scaled-down desktop layout
+- [ ] Harsh pure `#000` / `#fff` paired with multiple competing accent colors
 
-## Что делать вместо
+## What to Do Instead
 
-- Конкретный текст про продукт, а не маркетинговые штампы.
-- Ритм: чередуй плотные и воздушные секции, разные раскладки (текст слева/справа, bento, полноэкранный визуал, цитата).
-- Один запоминающийся приём на страницу, исполненный идеально.
+- **Tangible, product-specific copy**: Replace generic marketing speak with real numbers, workflows, and authentic product terms.
+- **Visual rhythm**: Alternate dense informative blocks with airy hero moments; vary layouts (editorial split, bento grid, full-bleed media, focused testimonials).
+- **One standout signature element**: Focus effort on executing one distinctive, polished feature per page rather than scattering mediocre decorations.

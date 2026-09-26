@@ -1,64 +1,71 @@
 ---
 name: design-wow
-description: Арт-директор для вау-дизайна сайта на Next.js + React + Tailwind — выбор визуального направления, типографика, цвет, композиция, анимации (Motion), микро-взаимодействия и визуальная самопроверка по скриншотам. Use for landing pages, hero sections, redesigns, "сделай красиво", "дизайн", "вау", "премиум", "лендинг", "главная страница", "редизайн", "выглядит скучно", "как у Apple/Linear/Vercel".
+description: Art director for high-impact web design on Next.js, React, Tailwind CSS, and Motion. Covers visual direction, typography, OKLCH palettes, micro-interactions, anti-slop rules, and screenshot-based visual QA. Use for landing pages, hero sections, redesigns, "make it look premium", "boring UI", "linear style", "apple style".
 ---
 
 # Design WOW
 
-Цель: чтобы человек открыл сайт и сказал "аххх". Средний, "нормальный" результат здесь считается провалом.
+Goal: The visitor opens the site and says "wow". Average, generic results count as failure.
 
-## Шаг 0. Бриф (не пропускай)
+## Step 0. Brief (Never Skip)
 
-Если в `DESIGN.md` в корне ещё нет направления, задай пользователю максимум 3 вопроса:
-1. Что за сайт и для кого? Какое чувство он должен вызывать (дорого / дерзко / спокойно / технологично / игриво)?
-2. 1–3 сайта-референса, которые нравятся.
-3. Светлая, тёмная или обе темы?
+If `DESIGN.md` does not exist in the project root, ask the user at most 3 questions:
+1. What is the product/site, who is the audience, and what emotion should it evoke (luxurious, bold, calm, tech-forward, playful)?
+2. 1–3 reference websites that match the desired quality.
+3. Light mode, dark mode, or both?
 
-Затем выбери ОДНО направление из `references/directions.md`, коротко опиши его (палитра, шрифты, приём-фишка, характер анимаций) и запиши в `DESIGN.md`. Дальше всегда следуй `DESIGN.md`.
+Pick ONE direction from `references/directions.md`, document it briefly (palette, font pairings, signature feature, motion feel) in `DESIGN.md`, and adhere to `DESIGN.md` consistently.
 
-## Шаг 1. Одна главная идея
+## Step 1. One Core Visual Feature
 
-У каждой страницы должна быть одна сильная визуальная фишка, которую запомнят. Например: огромный типографический hero, интерактивный 3D/WebGL-объект, сетка bento с живыми превью, горизонтальный скролл-рассказ, курсор-прожектор, анимированный градиент-меш.
-Одна фишка, сделанная идеально, лучше пяти средних.
+Every page must have one strong, memorable visual hook. Examples: massive editorial hero typography, interactive 3D/WebGL canvas, bento grid with live interactive previews, horizontal narrative scroll, cursor spotlight, or an animated gradient mesh.
+One signature feature executed flawlessly beats five mediocre elements.
 
-## Шаг 2. Типографика — 50% успеха
+## Step 2. Typography — 50% of the Impact
 
-- Максимум 2 семейства через `next/font`: выразительный display-шрифт для заголовков + нейтральный для текста. Примеры пар: `Instrument Serif + Inter`, `Space Grotesk + Inter`, `Fraunces + Geist`, `Clash Display + Satoshi`, `Unbounded + Manrope`. Кириллица: проверь, что шрифт её поддерживает (Unbounded, Manrope, Geologica, Onest, Inter, Golos, Fraunces — да).
-- Hero-заголовок крупный и дерзкий: `clamp(3rem, 8vw, 8rem)`, `leading-[0.9]`, `tracking-tight`. Одно слово можно выделить курсивом серифа или градиентом.
-- Модульная шкала (1.25–1.333); у основного текста `max-w-[65ch]`, `leading-relaxed`.
-- Цифры в таблицах и статистике — `tabular-nums`. Используй правильные кавычки «» и тире —.
+- Max 2 font families via `next/font`: one expressive display font for headings + one neutral workhorse for body text. Examples: `Instrument Serif + Inter`, `Space Grotesk + Inter`, `Fraunces + Geist`, `Clash Display + Satoshi`, `Unbounded + Manrope`. Verify Cyrillic/glyph support if non-Latin scripts are needed.
+- Hero heading: bold and deliberate. Use `clamp(3rem, 8vw, 8rem)`, `leading-[0.9]`, `tracking-tight`. Accent a single key word with serif italics or subtle gradient text.
+- Modular type scale (1.25–1.333). Body text: `max-w-[65ch]`, `leading-relaxed`.
+- Numbers in stats, tables, and metrics: always use `tabular-nums`. Use correct typographical quotes and em/en dashes.
 
-## Шаг 3. Цвет
+## Step 3. Color & Palette
 
-- Палитра в OKLCH-токенах в `@theme`: фон, поверхность, текст, приглушённый текст, граница, ОДИН акцент (+ его hover). 60/30/10.
-- Не используй чистые `#000` и `#fff` — бери off-black (`oklch(0.14 0.01 260)`) и off-white.
-- Акцент — только там, куда должен смотреть глаз (CTA, ключевое слово, активное состояние).
-- Для тёмной темы: поверхности становятся светлее с высотой, а не за счёт теней.
+- Define OKLCH tokens in `@theme`: background, surface, text, muted text, border, and ONE accent color (+ hover state). Follow the 60/30/10 ratio.
+- Avoid pure `#000` and `#fff` — use off-black (`oklch(0.14 0.01 260)`) and off-white.
+- Reserve the accent color strictly for focus points: primary CTA, key value metric, active state.
+- For dark mode: elevate surfaces by increasing lightness, not by stacking black shadows.
 
-## Шаг 4. Композиция и детали, которые дают "дорого"
+## Step 4. Composition & Craftsmanship ("Premium" Details)
 
-- Щедрый воздух: секции `py-24 md:py-32`, контейнер `max-w-7xl`. Ломай сетку намеренно: асимметрия, выход элементов за край, перекрытия.
-- Границы в 1px с прозрачностью (`border-white/10`), многослойные мягкие тени, внутренний блик на карточках (`shadow-[inset_0_1px_0_rgb(255_255_255/0.08)]`).
-- Глубина: лёгкий шум-зерно (SVG noise, opacity 3–6%), размытые цветовые пятна за контентом, `backdrop-blur` для стеклянной шапки.
-- Настоящий контент и визуал: реальные скриншоты продукта, фото, иллюстрации. Никаких "Lorem ipsum" и стоковых иконок в кружочках.
-- Детали: кастомное выделение текста (`selection:`), красивый скроллбар, favicon, OG-картинка, ухоженная 404.
+- Generous whitespace: sections `py-24 md:py-32`, max container `max-w-7xl`. Break the grid intentionally: asymmetry, elements bleeding past container edges, layered overlays.
+- 1px translucent borders (`border-white/10`), multi-layered soft shadows, subtle inner bevel highlights (`shadow-[inset_0_1px_0_rgb(255_255_255/0.08)]`).
+- Depth: subtle grain texture (SVG noise at 3–6% opacity), diffuse colored glows behind key content, `backdrop-blur` for floating navigation bars.
+- Real content and visuals: authentic product captures, custom diagrams, or curated photography. Never use placeholder "Lorem ipsum" or generic icons in colored circles.
+- Micro-polish: custom text selection styling (`selection:`), styled scrollbars, favicon, OG metadata, and polished 404 pages.
 
-## Шаг 5. Движение (Motion для React / CSS)
+## Step 5. Motion (React Motion / CSS)
 
-- Библиотека: `motion` (бывший framer-motion). Для переходов между страницами — View Transitions.
-- Появление при скролле: `opacity 0→1` + `y 24→0`, stagger 60–80ms, easing `[0.22, 1, 0.36, 1]`, 500–700ms. Один раз, без повторов.
-- Микро-взаимодействия: кнопки на hover слегка поднимаются/светятся, на `active` — `scale-[0.98]`; карточки с tilt или прожектором за курсором; magnetic-кнопка для главного CTA.
-- Hero: анимированный заголовок (по словам/буквам), параллакс слоёв, scroll-driven анимации (`useScroll` + `useTransform`).
-- Анимируй только `transform`, `opacity`, `filter`. Всегда поддерживай `prefers-reduced-motion`. Анимация должна быть 60fps на слабом ноутбуке.
+- Animation library: `motion` (formerly framer-motion) or native CSS. Use View Transitions for route changes.
+- Scroll reveal: `opacity 0→1` + `y 24→0`, stagger 60–80ms, easing `[0.22, 1, 0.36, 1]`, duration 500–700ms. Trigger once, never loop on scroll.
+- Micro-interactions: buttons slightly elevate and illuminate on hover, press down on active (`scale-[0.98]`); cards feature spotlight/tilt following cursor; magnetic feel on primary CTA.
+- Hero: word/character stagger entrance, subtle layer parallax, scroll-driven transforms (`useScroll` + `useTransform`).
+- Animate only GPU-accelerated properties: `transform`, `opacity`, `filter`. Always support `prefers-reduced-motion`. Target a solid 60fps on mid-tier hardware.
 
-## Шаг 6. Визуальная самопроверка (обязательно)
+## Step 6. Visual Self-Verification (Mandatory)
 
-Ты не видишь код глазами пользователя, поэтому проверяй скриншотами:
-1. Запусти dev-сервер. Через Playwright (MCP или скрипт) сделай скриншоты на 375, 768, 1440px, в светлой и тёмной теме.
-2. Посмотри на скриншоты и оцени по 10-балльной шкале: иерархия, типографика, цвет, воздух, фишка, "вау-эффект".
-3. Если любая оценка ниже 8 — назови 3 самые слабые вещи, исправь их, сделай скриншоты снова. Максимум 3 круга.
-4. Проверь по `references/anti-slop.md`.
+Inspect the page visually through screenshots:
+1. Start the dev server. Capture screenshots at 375px, 768px, and 1440px across light and dark themes (via Playwright MCP or script).
+2. Rate the result on a 10-point scale: hierarchy, typography, color harmony, whitespace, signature hook, and overall "wow factor".
+3. If any metric scores below 8/10: identify the 3 weakest elements, refine them, and re-capture screenshots (up to 3 iterations).
+4. Run the final check against `references/anti-slop.md`.
 
-## Порядок работы над страницей
+## Implementation Sequence
 
-1. Бриф → `DESIGN.md` 2. Токены (цвет, шрифты, радиусы) 3. Структура секций и мобильная версия 4. Hero с фишкой 5. Остальные секции 6. Анимации 7. Самопроверка по скриншотам 8. Производительность (скилл web-performance) и доступность.
+1. Brief → write `DESIGN.md`
+2. Tokens (colors, fonts, radii) in `@theme`
+3. Layout structure and mobile-first responsiveness
+4. Hero section with signature visual hook
+5. Secondary sections and interactive components
+6. Motion, transitions, and micro-interactions
+7. Screenshot-based visual verification
+8. Performance optimization and accessibility checks
